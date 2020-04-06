@@ -10,7 +10,7 @@ services:
             - ./postgresql_setup/init.sql:/docker-entrypoint-initdb.d/init.sql
 
     sensors_api:
-        build: ./sensors_api
+        image: cristiro/air-pollution-sensors-api
         ports:
         - "8080:5000"
         depends_on:
